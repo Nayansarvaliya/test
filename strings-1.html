@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <button onclick="upp()">UpperCase</button>
+    <p id="demo">Welcome to excel ptp</p>
+
+    <button onclick="low()">LowerCase</button>
+    <p id="demo1">Welcome tO EXCEL ptp</p>
+
+    <button onclick="len()">Length</button>
+    <p id="demo2"> </p>
+
+    <button onclick="beforetrim()">Before Trim</button>
+    <p id="demo3"></p>
+
+    <button onclick="aftertrim()">After Trim</button>
+    <p id="demo4"></p>
+
+    <button onclick="replace()">Replace</button>
+    <p id="demo5">Welcome to excel ptp</p>
+
+    <script>
+        function upp(){
+            let UpperCase = document.getElementById('demo');
+            UpperCase.innerHTML = UpperCase.innerHTML.toUpperCase()
+        }
+
+        function low(){
+            let lowercase = document.getElementById('demo1');
+            lowercase.innerHTML = lowercase.innerHTML.toLowerCase()
+        }
+
+        function len(){
+            let text = "Welcome to Excel PTP";
+            document.getElementById('demo2').innerHTML = text.length;
+
+        }
+        function beforetrim(){
+            let before = "A         Welcome to excel ptp";
+            document.getElementById('demo3').innerHTML = before.trimStart();
+        }
+        function aftertrim(){
+            let after = "Welcome to excel ptp           A       A";
+            document.getElementById('demo4').innerHTML = after.trimEnd();
+        }
+        function replace(){
+            let rep = document.getElementById('demo5');
+            rep.innerHTML = rep.innerHTML.replace("excel ptp", "Amar Infotech");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      
+
+        let employee = {
+            details : function(city, language){
+                return `${this.fname} has the salary of ${this.salary}. he lives in ${city}. and the language is ${language} `
+            }
+        }
+
+        let emp2 = {
+            fname : "Nayan",
+            salary : 200
+        }
+        
+        let emp3 = {
+            fname : "Harsh",
+            salary : 20
+        }
+        // call method accepts arguments saperataly
+        // but apply methoc accepts arguments in an array
+        // we will create a variable and pass the variable as a function!
+
+        let result = employee.details.bind(emp2, 'Ahmedabad' , 'Javascript')
+
+        // console.log(result())
+
+        // OOPs
+    </script>
+</body>
+</html>

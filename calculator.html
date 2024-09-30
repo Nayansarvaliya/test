@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Calculator For Js</h3>
+    <button onclick="sum()">Sum</button>
+    <p id="demo"></p>
+
+    <button onclick="sub()">Sub</button>
+    <p id="demo1"></p>
+
+    <button onclick="mul()">Mul</button>
+    <p id="demo2"></p>
+
+    <button onclick="div()">Divison</button>
+    <p id="demo3"></p>
+
+    <button onclick="mod()">Module</button>
+    <p id="demo4"></p>
+
+    <button onclick="exp()">Exponation</button>
+    <p id="demo5"></p>
+
+    <button onclick="ave()">Average</button>
+    <p id="demo6"></p>
+
+
+    <script>
+        function sum(){
+            let a = Number(prompt("Enter First Value: "))
+            let b = Number(prompt("Enter Second Value: "))
+
+            document.getElementById('demo').innerHTML = a + b
+        }
+        function sub(){
+            let a = Number(prompt("Enter First Value: "))
+            let b = Number(prompt("Enter Second Value: "))
+
+            document.getElementById('demo1').innerHTML = a - b
+        }
+
+        function mul(){
+            let a = Number(prompt("Enter First Value: "))
+            let b = Number(prompt("Enter Second Value: "))
+
+            document.getElementById('demo2').innerHTML = a * b
+        }
+
+        function div(){
+            let a = Number(prompt("Enter First Value: "))
+            let b = Number(prompt("Enter Second Value: "))
+
+            document.getElementById('demo3').innerHTML = a / b
+        }
+
+        function mod(){
+            let a = Number(prompt("Enter First Value: "))
+            let b = Number(prompt("Enter Second Value: "))
+
+            document.getElementById('demo4').innerHTML = a % b
+        }
+
+        function exp(){
+            let a = Number(prompt("Enter First Value: "))
+            let b = Number(prompt("Enter Second Value: "))
+
+            document.getElementById('demo5').innerHTML = a ** b
+        }
+        function ave(){
+            let a = Number(prompt("Enter First Value: "))
+            let b = Number(prompt("Enter Second Value: "))
+
+            document.getElementById('demo6').innerHTML = a  b
+        }
+    </script>
+</body>
+</html> 

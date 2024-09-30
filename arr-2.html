@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="numersort()">Numerical Sort</button>
+    <p id="arr"></p>
+
+    <button onclick="numerreversesort()">Numerical Reverse Sort</button>
+    <p id="arr1"></p>
+
+    <button onclick="alphasort()">Alphabetically Sort</button>
+    <p id="arr2"></p>
+
+    <button onclick="alphareversesort()">Alphabetically Reverse Sort</button>
+    <p id="arr3"></p>
+
+    
+    <script>
+        // let arr = [1, 100, 10, 23, 2, 45, 200]
+        // let countries = ["india" , "usa" , "canda" , "new zealand"]
+
+        // arr.sort(
+        //     function(a, b){
+        //         return b - a
+        //     }
+        // )
+        // console.log(arr)
+
+
+        // Map, filter, reduce!
+
+        // push, pop, shift, unshift, length, sort, reverse
+
+        let arr = [1, 20, 100, 2, 55, 300, 100]
+        document.getElementById('arr').innerHTML = arr
+
+        let arr1 = [20, 1, 100, 2, 55, 300, 100]
+        document.getElementById('arr1').innerHTML = arr1
+
+        let arr2 = ["india", "usa", "uk", "dubai"]
+        document.getElementById('arr2').innerHTML = arr2
+
+        let arr3 = ["india", "uk", "usa", "dubai"]
+        document.getElementById('arr3').innerHTML = arr3
+
+        arr.sort(
+            function(a, b){
+                return a - b
+            }
+        )
+        arr1.sort(
+            function(a, b){
+                return b - a
+            }
+        )
+
+
+        arr2.sort();
+
+        arr3.sort()
+        arr3.reverse();
+        
+        function numersort(){
+            document.getElementById('arr').innerHTML = arr
+        }
+        function numerreversesort(){
+            document.getElementById('arr1').innerHTML = arr1
+        }
+        function alphasort(){
+            document.getElementById('arr2').innerHTML = arr2
+        }
+        function alphareversesort(){
+            document.getElementById('arr3').innerHTML = arr3
+        }
+        
+    </script>
+</body>
+</html>

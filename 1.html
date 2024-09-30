@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="clickbtn()">click</button>
+    <script>
+        let x = Math.floor(Math.random() * 100) + 1;
+        let guess = 1;
+
+        function clickbtn() {
+            let x = prompt("Guess a Number :");
+
+            y = Number(guess);
+
+            if (x == y) {
+                alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+                    + guess + " GUESS ");
+            }
+
+            else if (x > y) {
+                guess++;
+                alert("SORRY!! TRY A SMALLER NUMBER");
+            }
+            else {
+                guess++;
+                alert("SORRY!! TRY A GREATER NUMBER")
+            }
+        }
+
+       
+
+    </script>
+</body>
+
+</html>

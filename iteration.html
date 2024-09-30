@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="myid"></p>
+    <script>
+                let fruits = ["Banana", "Orange", "Apple", "Mango"];
+                let arr = [1,12,14,27,18]
+
+                // map, filter, reduce
+
+                let arr2 = arr.reduceRight(myFunc)
+
+                // function myFunc(value, index, array){
+                //     return arr + '<br>'
+                // }   
+
+                // function myFunc(value, index, array){
+                //     return value >= 18
+                // }   
+                
+                function myFunc(total, value, index, array){
+                    return value += total
+                }   
+
+                document.getElementById('myid').innerHTML = arr2
+    </script>
+</body>
+</html>

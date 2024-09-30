@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="push1()">Push</button>
+    <button onclick="pop()">Pop</button>
+    <button onclick="shift()">Shift</button>
+    <button onclick="unshift()">Unshift</button>
+    <button onclick="lengths()">Length</button>
+    <!-- <p id="demo">I am Web developer in <span id="myid"></div> </p> -->
+
+        <p id="arr"></p>
+    <script>
+        let arr = [1,2,4,7,8]
+        document.getElementById('arr').innerHTML = arr
+
+        function push1(){
+            let x = prompt("Enter a value: ")
+            arr.push(x)
+            document.getElementById('arr').innerHTML = arr
+        }
+
+        function pop(){
+            arr.pop()
+            document.getElementById('arr').innerHTML = arr
+        }
+
+        function shift(){
+            arr.shift()
+            document.getElementById('arr').innerHTML = arr
+        }
+
+        function unshift(){
+            let x = prompt("Enter a value: ")
+            arr.unshift(x)
+            document.getElementById('arr').innerHTML = arr
+        }
+        function lengths(){
+            arr.length()
+            document.getElementById('arr').innerHTML = arr
+        }
+
+    </script>
+</body>
+</html>

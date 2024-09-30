@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(31, 70, 146);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        background-color: aliceblue;
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid gray;
+        display: block;
+        width: 80%;
+        margin: 0px auto;
+        margin-top: 13px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .submit {
+        background-color: rgb(31, 70, 146);
+        width: 15%;
+        margin-top: 30px;
+        color: #fff;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .successMessage {
+        color: green;
+        margin: 0 auto;
+        padding: 0;
+        width: 80%;
+        display: block;
+        margin-top: 20px;
+    }
+
+    p {
+        color: red;
+        margin: 0;
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <h1>Contact Form</h1>
+        <form action="" onsubmit="formValidation(event)">
+
+            <input type="text" id="username" placeholder="Enter Your Username"><br>
+            <p id="usernameError"></p>
+
+            <input type="number" name="number" id="number" placeholder="Enter Your Number"><br>
+            <p id="numberError"></p>
+
+            <input type="text" name="email" id="email" placeholder="Enter Your Email"><br>
+            <p id="emailError"></p>
+
+            <input type="password" name="password" id="password" placeholder="Enter Your Password"><br>
+            <input type="password " name="userpass" id="userpass" placeholder="Enter Your confirm Password">
+            <p id="passwordError"></p>
+
+            <span id="successMessage" class="successMessage"></span>
+            <input type="submit" class="submit">
+        </form>
+
+
+    </div>
+
+    <script>
+        function formValidation(event) {
+            event.preventDefault()
+
+            let username = document.getElementById('username')
+            let number = document.getElementById('number')
+            let email = document.getElementById('email')
+            let password = document.getElementById('password')
+            let userpass = document.getElementById('userpass')
+
+            let usernameError = document.getElementById('usernameError')
+            let numberError = document.getElementById('numberError')
+            let emailError = document.getElementById('emailError')
+            let passwordError = document.getElementById('passwordError')
+
+            let isValid = true
+            let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
+            let successMessage = document.getElementById('successMessage')
+
+            if (username.value.trim() == "") {
+                usernameError.innerHTML = "First Name is Valid"
+                isValid = false
+            }
+            else if (username.value.length < 5) {
+                usernameError.innerHTML = "First Name length greater than 5"
+                isValid = false
+            }
+            if (number.value.trim() == "") {
+                numberError.innerHTML = "First Number is Valid"
+                isValid == false
+            }
+            else if (number.value.length != 10) {
+                numberError.innerHTML = "Number length greater than 10"
+                isValid == false
+            }
+            else if (number.value.length > 10) {
+                numberError.innerHTML = "Number length less than 10"
+                isValid == false
+            }
+           if (!email.value.match(regex)){
+                emailError.innerHTML = "Email is not Valid"
+                isValid == false
+           }
+           if(password.value != userpass.value){
+                passwordError.innerHTML = "Password and confirm Password must be equl"
+                isValid == false
+           }
+          
+            if (isValid) {
+               successMessage.innerHTML = "Form Submitted Successfuly!!"
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

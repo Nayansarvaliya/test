@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="btnclick()">Click</button>
+    <p id="arr"></p>
+    <script>
+        let arr = ["Have you ever played quiet tennis? It's the same as regular tennis, but without the racket.", 
+                    "I used to be addicted to the Hokey Pokey, but then I turned myself around.", 
+                    "A horse walks into a diner. The host says, The horse says, You read my mind!",
+                    "Did you hear about the ghost that joined a soccer team? It wanted to be a ghoulie.",
+                    "A police officer pulls over a semi truck. He gets the usual license and registration, but hears strange noises coming from the trailer, so he decides to investigate.",
+                    "The Irishman replies, well, you see my brother and I used to go out drinking every night, but he lives across the country now, so every night, I order two drinks. One for myself, and one for my brother."
+                ]
+        function btnclick(){
+            let randomItem = arr[Math.floor(Math.random()*arr.length)] 
+        
+            document.getElementById('arr').innerHTML = randomItem
+        }
+       
+               
+    </script>
+</body>
+
+</html>
